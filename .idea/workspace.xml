@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="create Annotations @Table, @Column, @Id">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/util/DataBaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="refactor classes for task 3 into package task3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +37,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/GeekBranch/JavaJunior/JDBC/src/main/java/ru/sergej/tasks1_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +45,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GeekBranch\JavaJunior\JDBC\src\main\java\ru\sergej\tasks1_2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +60,7 @@
       <updated>1710834788886</updated>
       <workItem from="1710834790759" duration="975000" />
       <workItem from="1710848506283" duration="3763000" />
-      <workItem from="1710915675000" duration="9037000" />
+      <workItem from="1710915675000" duration="9910000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -115,7 +118,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710938501023</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactor finality classes for task 1 &amp; 2 into package task1_2">
+      <option name="closed" value="true" />
+      <created>1710943006969</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710943006969</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor classes for task 3 into package task3">
+      <option name="closed" value="true" />
+      <created>1710943089061</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710943089061</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +147,8 @@
     <MESSAGE value="create method createTable in Main class" />
     <MESSAGE value="finally task 1 and task 2" />
     <MESSAGE value="create Annotations @Table, @Column, @Id" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Annotations @Table, @Column, @Id" />
+    <MESSAGE value="refactor finality classes for task 1 &amp; 2 into package task1_2" />
+    <MESSAGE value="refactor classes for task 3 into package task3" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor classes for task 3 into package task3" />
   </component>
 </project>

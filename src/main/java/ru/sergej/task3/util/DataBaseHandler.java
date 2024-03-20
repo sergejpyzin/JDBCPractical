@@ -54,4 +54,57 @@ public class DataBaseHandler {
             throw new RuntimeException(e);
         }
     }
+
+    public void update(Object object, Connection connection) throws SQLException, IllegalAccessException {
+        Class<?> clazz = object.getClass();
+        if (!clazz.isAnnotationPresent(Table.class)) {
+            throw new IllegalArgumentException("Класс не помечен аннотацией @Table");
+        }
+
+        Table table = clazz.getAnnotation(Table.class);
+        String tableName = table.name();
+
+        StringBuilder setClause = new StringBuilder();
+
+        Field[] fields = clazz.getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            if (field.isAnnotationPresent(Column.class)) {
+                Column column = field.getAnnotation(Column.class);
+                setClause.append(column.name()).append("=?,");
+            }
+        }
+
+
+        setClause.deleteCharAt(setClause.length() - 1);
+
+        if (!setClause.toString().isEmpty()) {
+            String sql = String.format("UPDATE %s SET %s WHERE id=?", tableName, setClause);
+
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                int index = 1;
+                for (Field field : fields) {
+                    if (field.isAnnotationPresent(Column.class)) {
+                        Object value = field.get(object);
+                        preparedStatement.setObject(index++, value);
+                    }
+                }
+                preparedStatement.setObject(index, getIdValue(object));
+                preparedStatement.executeUpdate();
+            }
+        }
+    }
+
+    private Object getIdValue(Object obj) throws IllegalAccessException {
+        Field[] fields = obj.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            if (field.isAnnotationPresent(Id.class)) {
+                return field.get(obj);
+            }
+        }
+        return null;
+    }
+
+
 }
