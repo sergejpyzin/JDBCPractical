@@ -1,4 +1,4 @@
-package ru.sergej;
+package ru.sergej.tasks1_2;
 
 import ru.sergej.util.ConnectionManager;
 
