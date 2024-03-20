@@ -1,4 +1,4 @@
-package ru.sergej.util;
+package ru.sergej.task3.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

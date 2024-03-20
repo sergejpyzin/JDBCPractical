@@ -1,6 +1,6 @@
 package ru.sergej.tasks1_2;
 
-import ru.sergej.util.ConnectionManager;
+import ru.sergej.task3.util.ConnectionManager;
 
 import java.sql.*;
 

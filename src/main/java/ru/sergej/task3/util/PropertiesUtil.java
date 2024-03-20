@@ -1,4 +1,4 @@
-package ru.sergej.util;
+package ru.sergej.task3.util;
 
 import java.io.IOException;
 import java.util.Properties;
