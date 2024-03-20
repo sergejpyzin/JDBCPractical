@@ -18,8 +18,11 @@ public class Main {
         dropTable(connection, "person");
         createTable(connection);
         insertDataToTable(connection);
+        requestDataFromDatabase(connection);
         updateTable(connection, "Sergey", "Holmogorov");
+        requestDataFromDatabase(connection);
         deletedRowInTable(connection, 2);
+        requestDataFromDatabase(connection);
         requestDataFromDatabase(connection);
     }
 

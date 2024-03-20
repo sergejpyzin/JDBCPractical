@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="create method createTable in Main class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="finally task 1 and task 2">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/sergej/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
       <updated>1710834788886</updated>
       <workItem from="1710834790759" duration="975000" />
       <workItem from="1710848506283" duration="3763000" />
-      <workItem from="1710915675000" duration="6413000" />
+      <workItem from="1710915675000" duration="7732000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -98,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710918694239</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finally task 1 and task 2">
+      <option name="closed" value="true" />
+      <created>1710925866596</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710925866596</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +116,7 @@
     <MESSAGE value="create database.properties and PropertiesUtil" />
     <MESSAGE value="create ConnectionManager" />
     <MESSAGE value="create method createTable in Main class" />
-    <option name="LAST_COMMIT_MESSAGE" value="create method createTable in Main class" />
+    <MESSAGE value="finally task 1 and task 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="finally task 1 and task 2" />
   </component>
 </project>
