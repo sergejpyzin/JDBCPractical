@@ -1,4 +1,4 @@
-package ru.sergej.task3.util;
+package ru.sergej.task3.repositories;
 
 import ru.sergej.task3.annotations.Column;
 import ru.sergej.task3.annotations.Id;
