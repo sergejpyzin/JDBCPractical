@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="refactor DataBaseHandler into repositories package">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/annotations/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/annotations/Table.java" afterDir="false" />
+    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="changed class Person for testing code">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/repositories/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/repositories/DataBaseHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,25 +35,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/GeekBranch/JavaJunior/JDBC/src/main/java/ru/sergej/tasks1_2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/GeekBranch/JavaJunior/JDBC/src/main/java/ru/sergej/tasks1_2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GeekBranch\JavaJunior\JDBC\src\main\java\ru\sergej\tasks1_2" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.sergej.task3.Main" />
+      <module name="JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.sergej.task3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,7 +85,8 @@
       <updated>1710834788886</updated>
       <workItem from="1710834790759" duration="975000" />
       <workItem from="1710848506283" duration="3763000" />
-      <workItem from="1710915675000" duration="12323000" />
+      <workItem from="1710915675000" duration="12922000" />
+      <workItem from="1711096824023" duration="3732000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -154,11 +176,38 @@
       <option name="project" value="LOCAL" />
       <updated>1710944042608</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changed @Table">
+      <option name="closed" value="true" />
+      <created>1710950879917</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710950879917</updated>
+    </task>
+    <task id="LOCAL-00013" summary="changed class Person for testing code">
+      <option name="closed" value="true" />
+      <created>1710950925021</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710950925021</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
@@ -171,6 +220,8 @@
     <MESSAGE value="refactor classes for task 3 into package task3" />
     <MESSAGE value="create all methods in DataBaseHandler" />
     <MESSAGE value="refactor DataBaseHandler into repositories package" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor DataBaseHandler into repositories package" />
+    <MESSAGE value="changed @Table" />
+    <MESSAGE value="changed class Person for testing code" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed class Person for testing code" />
   </component>
 </project>
