@@ -30,5 +30,26 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+
+        try (Connection connection = ConnectionManager.open()) {
+            DataBaseHandler dataBaseHandler = new DataBaseHandler();
+
+
+            Person person1 = new Person("Иван", "Иванов", 30);
+            dataBaseHandler.saveOrUpdate(connection, person1);
+            System.out.println("Person сохранен в базе данных: " + person1);
+
+
+            Person personToUpdate = new Person("Петр", "Петров", 25);
+            dataBaseHandler.saveOrUpdate(connection, personToUpdate);
+            System.out.println("Person сохранен в базе данных: " + personToUpdate);
+
+            personToUpdate.setAge(26);
+            dataBaseHandler.saveOrUpdate(connection, personToUpdate);
+            System.out.println("Person обновлен в базе данных: " + personToUpdate);
+        } catch (SQLException | IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }
