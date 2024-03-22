@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="changed class Person for testing code">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="2a0cd8b0-3d0e-4a20-9cdb-498b6552c25c" name="Changes" comment="changed class Person as added lombok annotations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/entity/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/repositories/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sergej/task3/repositories/DataBaseHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +84,7 @@
       <workItem from="1710834790759" duration="975000" />
       <workItem from="1710848506283" duration="3763000" />
       <workItem from="1710915675000" duration="12922000" />
-      <workItem from="1711096824023" duration="3732000" />
+      <workItem from="1711096824023" duration="5353000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -192,7 +190,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710950925021</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="changed class Person and DataBaseHandler">
+      <option name="closed" value="true" />
+      <created>1711110593452</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711110593452</updated>
+    </task>
+    <task id="LOCAL-00015" summary="changed class Person as added lombok annotations">
+      <option name="closed" value="true" />
+      <created>1711110931920</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711110931920</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +236,8 @@
     <MESSAGE value="refactor DataBaseHandler into repositories package" />
     <MESSAGE value="changed @Table" />
     <MESSAGE value="changed class Person for testing code" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed class Person for testing code" />
+    <MESSAGE value="changed class Person and DataBaseHandler" />
+    <MESSAGE value="changed class Person as added lombok annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed class Person as added lombok annotations" />
   </component>
 </project>

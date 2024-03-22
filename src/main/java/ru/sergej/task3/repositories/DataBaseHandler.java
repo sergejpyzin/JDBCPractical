@@ -151,7 +151,6 @@ public class DataBaseHandler {
             }
         }
 
-        // Добавляем поле id в случае, если оно не было найдено в классе
         if (!idFound) {
             createTableQuery.append("id INT AUTO_INCREMENT PRIMARY KEY,");
         }
@@ -175,4 +174,81 @@ public class DataBaseHandler {
             throw new IllegalArgumentException("Unsupported field type: " + fieldType.getName());
         }
     }
+
+    public void saveOrUpdate(Connection connection, Object object) throws SQLException {
+        Class<?> clazz = object.getClass();
+
+        if (!clazz.isAnnotationPresent(Table.class)) {
+            throw new IllegalArgumentException("Класс не помечен аннотацией @Table");
+        }
+
+        Table table = clazz.getAnnotation(Table.class);
+        String tableName = table.name();
+
+        if (!isTableExists(connection, tableName)) {
+            createTable(connection, clazz);
+        }
+
+        StringBuilder columns = new StringBuilder();
+        StringBuilder values = new StringBuilder();
+
+        Field[] fields = clazz.getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+
+            if (field.isAnnotationPresent(Column.class)) {
+                Column column = field.getAnnotation(Column.class);
+                columns.append(column.name()).append(",");
+                values.append("?,");
+            }
+        }
+
+        columns.deleteCharAt(columns.length() - 1);
+        values.deleteCharAt(values.length() - 1);
+
+        String sqlCheckIfExists = String.format("SELECT id FROM %s WHERE id=?", tableName);
+        String sqlInsert = String.format("INSERT INTO %s (%s) VALUES (%s)", tableName, columns, values);
+        String sqlUpdate = String.format("UPDATE %s SET %s WHERE id=?", tableName, columns);
+
+        try (PreparedStatement checkIfExistsStatement = connection.prepareStatement(sqlCheckIfExists);
+             PreparedStatement insertStatement = connection.prepareStatement(sqlInsert);
+             PreparedStatement updateStatement = connection.prepareStatement(sqlUpdate)) {
+
+            int index = 1;
+            Object idValue = null;
+
+            for (Field field : fields) {
+                if (field.isAnnotationPresent(Id.class)) {
+                    idValue = field.get(object);
+                    break;
+                }
+            }
+
+            checkIfExistsStatement.setObject(1, idValue);
+            try (ResultSet resultSet = checkIfExistsStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    for (Field field : fields) {
+                        if (field.isAnnotationPresent(Column.class)) {
+                            Object value = field.get(object);
+                            updateStatement.setObject(index++, value);
+                        }
+                    }
+                    updateStatement.setObject(index, idValue);
+                    updateStatement.executeUpdate();
+                } else {
+                    index = 1;
+                    for (Field field : fields) {
+                        if (field.isAnnotationPresent(Column.class)) {
+                            Object value = field.get(object);
+                            insertStatement.setObject(index++, value);
+                        }
+                    }
+                    insertStatement.executeUpdate();
+                }
+            }
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
